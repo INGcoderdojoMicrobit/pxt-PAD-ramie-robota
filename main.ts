@@ -16,7 +16,7 @@ basic.forever(function () {
     I2C_LCD1602.clear()
     I2C_LCD1602.ShowNumber(pins.analogReadPin(AnalogPin.P1), 10, 1)
     I2C_LCD1602.ShowNumber(pins.analogReadPin(AnalogPin.P2), 10, 0)
-    music.playTone(262, 10)
+    music.playTone(294, 10)
     arp1 = pins.analogReadPin(AnalogPin.P1)
     arp2 = pins.analogReadPin(AnalogPin.P2)
     if (arp1 >= 340 && arp1 <= 370) {
