@@ -22,6 +22,7 @@ basic.forever(function () {
     if (arp1 >= 340 && arp1 <= 370) {
         // FIRE
         led.plot(1, 1)
+        I2C_LCD1602.ShowString("BOOM", 4, 1)
     } else if (arp1 >= 20 && arp1 <= 50) {
         // UP
         led.plot(1, 0)
@@ -30,13 +31,18 @@ basic.forever(function () {
     } else if (arp1 >= 80 && arp1 <= 100) {
         // DOWN
         led.plot(1, 2)
+        I2C_LCD1602.ShowString("D", 1, 0)
         radio.sendString("D")
     } else if (arp1 >= 0 && arp1 <= 15) {
         // LEFT
         led.plot(0, 1)
+        I2C_LCD1602.ShowString("L", 0, 0)
+        radio.sendString("L")
     } else if (arp1 >= 150 && arp1 <= 185) {
         // RIGHT
         led.plot(2, 1)
+        I2C_LCD1602.ShowString("R", 3, 0)
+        radio.sendString("R")
     } else {
         // EMPTY
         led.unplot(1, 1)
