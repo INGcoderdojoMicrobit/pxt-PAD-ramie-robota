@@ -61,22 +61,22 @@ basic.forever(function () {
         // UP
         led.plot(3, 2)
         I2C_LCD1602.ShowString("U2", 1, 0)
-        radio.sendString("U2")
+        radio.sendString("1")
     } else if (arp2 >= 80 && arp2 <= 100) {
         // DOWN
         led.plot(3, 4)
         I2C_LCD1602.ShowString("D2", 1, 0)
-        radio.sendString("D2")
+        radio.sendString("3")
     } else if (arp2 >= 0 && arp2 <= 15) {
         // LEFT
         led.plot(2, 3)
         I2C_LCD1602.ShowString("L2", 0, 0)
-        radio.sendString("L2")
+        radio.sendString("2")
     } else if (arp2 >= 150 && arp2 <= 185) {
         // RIGHT
         led.plot(4, 3)
         I2C_LCD1602.ShowString("R2", 3, 0)
-        radio.sendString("R2")
+        radio.sendString("4")
     } else {
         // EMPTY
         led.unplot(3, 3)
