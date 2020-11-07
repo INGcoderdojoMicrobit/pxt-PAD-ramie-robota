@@ -1,9 +1,12 @@
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("A")
+})
 let arp2 = 0
 let arp1 = 0
 let item = 0
 radio.setGroup(199)
 I2C_LCD1602.LcdInit(63)
-basic.showIcon(IconNames.Heart)
+basic.showIcon(IconNames.Yes)
 basic.pause(1000)
 basic.clearScreen()
 basic.forever(function () {
