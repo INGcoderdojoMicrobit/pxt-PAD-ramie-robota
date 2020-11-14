@@ -1,14 +1,5 @@
-input.onButtonPressed(Button.A, function () {
-    I2C_LCD1602.ShowString("ABCDEFGHIJKLMNOP", 0, 1)
-    I2C_LCD1602.ShowString("abcdefghijklmnop", 0, 0)
-    radio.sendString("A")
-})
 input.onButtonPressed(Button.AB, function () {
     I2C_LCD1602.clear()
-})
-input.onButtonPressed(Button.B, function () {
-    I2C_LCD1602.ShowString("12234567890", 0, 1)
-    I2C_LCD1602.ShowString("!@#$%^&*()", 0, 0)
 })
 let arp2 = 0
 let arp1 = 0
@@ -26,7 +17,7 @@ basic.forever(function () {
         // FIRE
         led.plot(1, 1)
         I2C_LCD1602.ShowString("clear screan", 0, 1)
-        radio.sendString("BOOM")
+        radio.sendString("A")
     } else if (arp1 >= 20 && arp1 <= 50) {
         // UP
         led.plot(1, 0)
